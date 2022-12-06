@@ -30,7 +30,7 @@ def chat():
 
 def start():
     try:
-        cgit config --global user.email “[valid-email]”lient.connect((SERVER, PORT))
+        client.connect((SERVER, PORT))
     except:
         print(colored("SERVER IS OFFLINE!!!", 'magenta') + " Closing client...")
         exit()
