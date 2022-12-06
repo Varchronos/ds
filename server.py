@@ -27,14 +27,11 @@ def handle_client(conn, addr):
             if msg:
                 if(msg == DISCONNECT_MSG):
                     connected = False
-                    break
 
-            print(colored(f"[CLIENT {addr}]", 'green') + f": {msg}" + colored(date_time.strftime(" [%H:%M:%S]"),'yellow'))
+                print(colored(f"[CLIENT {addr}]", 'green') + f": {msg}" + colored(date_time.strftime(" [%H:%M:%S]"),'yellow'))
             # msg = input(str("-->"))
-            # conn.send(bytes(msg, FORMAT))
-
-
-    print("\n" + colored(f"[CLIENT {addr} has disconnected]", 'red'))
+            # conn.send(bytes(msg, FORMAT))       
+    print(colored(f"[CLIENT {addr} has disconnected]", 'red'))
     conn.close()
 
 def start():

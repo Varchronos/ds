@@ -18,7 +18,8 @@ def chat():
         if(msg == DISCONNECT_MSG):
             client.send(bytes(DISCONNECT_MSG,FORMAT))
             connected = False
-        client.send(bytes(msg, FORMAT))
+        else:
+            client.send(bytes(msg, FORMAT))
         # msg =(client.recv(1024).decode(FORMAT))
         # print(colored("[SERVER]",'green') + f": {msg}")
         # print(f'\033[1A' + "[SERVER]: {msg}" + '\033[K')

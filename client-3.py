@@ -18,7 +18,8 @@ def chat():
         if(msg == DISCONNECT_MSG):
             client.send(bytes(DISCONNECT_MSG,FORMAT))
             connected = False
-        client.send(bytes(msg, FORMAT))
+        else:
+            client.send(bytes(msg, FORMAT))
         # msg =(client.recv(1024).decode(FORMAT))
         # print(colored("[SERVER]",'green') + f": {msg}")
         # print(f'\033[1A' + "[SERVER]: {msg}" + '\033[K')
@@ -29,7 +30,7 @@ def chat():
 
 def start():
     try:
-        client.connect((SERVER, PORT))
+        cgit config --global user.email “[valid-email]”lient.connect((SERVER, PORT))
     except:
         print(colored("SERVER IS OFFLINE!!!", 'magenta') + " Closing client...")
         exit()
